@@ -1,0 +1,33 @@
+*{
+	font-family: 'Licorice', cursive;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	background: #86f;
+	padding: 20px 5px;
+}
+
+.caja {
+	background: #025;
+	height: 80px;
+	width: 80px;
+	margin: 20px;
+	animation-name: desplazarse;
+	animation-duration: 1s;
+	position: relative;
+	/*animation-timing-function: como se va a desplazar (line, ease, ease-in, ease-out, ease-in-out)*/ 
+	animation-iteration-count: infinite; /*cuantas veces s va a repetir*/
+	animation-direction: alternate-reverse;
+}
+
+@keyframes desplazarse {
+	from {
+		position: relative;
+		left: 0;
+	}
+	to {
+		left: 80%;
+	}
+}

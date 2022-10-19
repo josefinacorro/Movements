@@ -1,0 +1,52 @@
+*{
+	font-family: 'Licorice', cursive;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	background: #86f;
+	padding: 20px 5px;
+}
+
+.caja {
+	background: #025;
+	height: 80px;
+	width: 80px;
+	transition-property: left, background;
+	transition-duration: 3s, 1s;
+	margin: 20px;
+	/*background: inherit; el color de fondo es el mismo que la caja de lo hereda*/
+	position: relative;
+	left: 0;
+}
+
+.container:hover > .caja { 
+/*cuando todo el contenedor, cambio las propiedades de unos de los elementos*/
+	left: 80%;
+	background: #fff;
+}
+
+.caja:first-child {
+	transition-timing-function: linear;/*vel constante*/
+}
+
+.caja:nth-child(2) {
+	transition-timing-function:ease;/*arranca con todo y termina despacio, cambio brusco*/
+	
+}
+
+.caja:nth-child(3) {
+	transition-timing-function:ease-in;/*arranca lento y termina con todo*/
+	
+}
+
+.caja:nth-child(4) {
+	transition-timing-function:ease-out;/*arranca con todo y termina despacio, cambio tranqui*/
+	
+}
+
+.caja:nth-child(5) {
+	transition-timing-function:ease-in-out;/*arranca lento, acelera y termina lento*/ 
+	
+}
